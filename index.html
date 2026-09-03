@@ -115,6 +115,22 @@
             font-size: 12px;
         }
         
+        .badge-completed {
+            background: rgba(16, 185, 129, 0.15);
+            color: #10b981;
+            padding: 4px 12px;
+            border-radius: 9999px;
+            font-size: 12px;
+        }
+        
+        .badge-progress {
+            background: rgba(251, 191, 36, 0.15);
+            color: #f59e0b;
+            padding: 4px 12px;
+            border-radius: 9999px;
+            font-size: 12px;
+        }
+        
         .badge-github {
             background: rgba(255, 255, 255, 0.05);
             color: #9ca3af;
@@ -145,7 +161,6 @@
             border: 1px solid rgba(255, 255, 255, 0.05);
         }
 
-        /* Project Carousel */
         .projects-scroll {
             display: flex;
             gap: 24px;
@@ -221,7 +236,6 @@
             color: #9ca3af;
         }
 
-        /* Certificate cards */
         .cert-card {
             transition: all 0.3s ease;
             cursor: pointer;
@@ -233,7 +247,24 @@
             box-shadow: 0 10px 30px rgba(6, 182, 212, 0.1);
         }
 
-        /* Section label */
+        .learning-card {
+            transition: all 0.3s ease;
+        }
+
+        .learning-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(6, 182, 212, 0.3);
+        }
+
+        .contribution-tag {
+            background: rgba(139, 92, 246, 0.15);
+            color: #a78bfa;
+            padding: 2px 10px;
+            border-radius: 9999px;
+            font-size: 10px;
+            font-weight: 600;
+        }
+
         .section-label {
             display: inline-block;
             padding: 4px 16px;
@@ -273,7 +304,7 @@
                     <a href="#skills" class="text-gray-300 hover:text-cyan-400 transition-colors text-sm">Skills</a>
                     <a href="#projects" class="text-gray-300 hover:text-cyan-400 transition-colors text-sm">Projects</a>
                     <a href="#experience" class="text-gray-300 hover:text-cyan-400 transition-colors text-sm">Experience</a>
-                    <a href="#certificates" class="text-gray-300 hover:text-cyan-400 transition-colors text-sm">Certificates</a>
+                    <a href="#learning" class="text-gray-300 hover:text-cyan-400 transition-colors text-sm">Learning</a>
                     <a href="#contact" class="text-gray-300 hover:text-cyan-400 transition-colors text-sm">Contact</a>
                     <a href="#contact" class="btn-primary text-white px-5 py-2 rounded-lg text-sm font-medium">
                         Hire Me
@@ -292,13 +323,13 @@
                 <a href="#skills" onclick="closeMenu()" class="block text-gray-300 hover:text-cyan-400 transition-colors">Skills</a>
                 <a href="#projects" onclick="closeMenu()" class="block text-gray-300 hover:text-cyan-400 transition-colors">Projects</a>
                 <a href="#experience" onclick="closeMenu()" class="block text-gray-300 hover:text-cyan-400 transition-colors">Experience</a>
-                <a href="#certificates" onclick="closeMenu()" class="block text-gray-300 hover:text-cyan-400 transition-colors">Certificates</a>
+                <a href="#learning" onclick="closeMenu()" class="block text-gray-300 hover:text-cyan-400 transition-colors">Learning</a>
                 <a href="#contact" onclick="closeMenu()" class="block text-gray-300 hover:text-cyan-400 transition-colors">Contact</a>
             </div>
         </div>
     </nav>
 
-    <!-- ===== HERO SECTION ===== -->
+    <!-- ===== HERO SECTION (UPDATED) ===== -->
     <section id="home" class="min-h-screen flex items-center gradient-bg pt-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
             <div class="grid md:grid-cols-2 gap-12 items-center">
@@ -312,19 +343,17 @@
                     </h2>
                     <div class="flex flex-wrap items-center gap-2 mb-4">
                         <span class="bg-cyan-500/20 text-cyan-400 px-3 py-1 rounded-full text-sm font-medium">
-                            🎓 Graduate 2026
+                            🎓 Computer Science | Class of 2026
                         </span>
                         <span class="bg-blue-500/20 text-blue-400 px-3 py-1 rounded-full text-sm font-medium">
-                            🇿🇲 Zambia
+                             Lusaka, Zambia
                         </span>
                         <span class="bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full text-sm font-medium">
-                            💻 10+ Projects
+                             10+ Projects
                         </span>
                     </div>
                     <p class="text-gray-400 mb-6 max-w-lg text-lg leading-relaxed">
-                        Computer Science graduate with hands-on experience in full-stack development, 
-                        IT support, and data-driven research. Passionate about building tech solutions 
-                        for social impact in Zambia and beyond.
+                        Computer Science student with hands-on experience in full-stack development, IT support, and data-driven applications. Passionate about building practical technology solutions that solve real-world problems in Zambia and beyond.
                     </p>
 
                     <div class="flex flex-wrap gap-4 mb-8">
@@ -334,8 +363,7 @@
                         <a href="#contact" class="px-6 py-3 btn-outline rounded-lg font-medium flex items-center gap-2">
                             <i class="fas fa-paper-plane"></i> Contact Me
                         </a>
-                        <!-- CV DOWNLOAD BUTTON - Place your CV in the same folder -->
-                        <a href="Documents/Michael_Matanda_General_CV.docx" download class="px-6 py-3 border border-gray-600 rounded-lg font-medium hover:border-cyan-400 hover:text-cyan-400 transition-colors flex items-center gap-2">
+                        <a href="Michael_Matanda_General_CV.docx" download class="px-6 py-3 border border-gray-600 rounded-lg font-medium hover:border-cyan-400 hover:text-cyan-400 transition-colors flex items-center gap-2">
                             <i class="fas fa-file-pdf"></i> Download CV
                         </a>
                     </div>
@@ -364,7 +392,7 @@
                             </div>
                         </div>
                         <div class="absolute -bottom-4 -right-4 bg-[#0a0a0f] border border-cyan-500/20 rounded-xl px-4 py-2">
-                            <p class="text-sm text-cyan-400"><i class="fas fa-graduation-cap mr-1"></i> Graduate 2026</p>
+                            <p class="text-sm text-cyan-400"><i class="fas fa-graduation-cap mr-1"></i> Class of 2026</p>
                         </div>
                         <div class="absolute -top-4 -left-4 bg-[#0a0a0f] border border-cyan-500/20 rounded-xl px-4 py-2">
                             <p class="text-sm text-cyan-400"><i class="fas fa-code mr-1"></i> 10+ Projects</p>
@@ -375,7 +403,7 @@
         </div>
     </section>
 
-    <!-- ===== ABOUT SECTION ===== -->
+    <!-- ===== ABOUT SECTION (UPDATED) ===== -->
     <section id="about" class="py-20 bg-[#111118]">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="section-title">
@@ -388,19 +416,18 @@
                 <div class="space-y-4">
                     <h3 class="text-2xl font-bold text-white">Building Tech That Matters</h3>
                     <p class="text-gray-400 text-lg leading-relaxed">
-                        I'm a recent Computer Science graduate from Cavendish University Zambia, 
-                        passionate about full-stack development and creating technology solutions 
-                        that address real-world challenges in my community and beyond.
+                        I'm a Computer Science student at Cavendish University Zambia with hands-on experience building web applications, data-driven platforms, and technology solutions for real-world challenges.
                     </p>
                     <p class="text-gray-400 text-lg leading-relaxed">
-                        From smart waste management platforms to legal advocacy tools and climate 
-                        dashboards, I believe in using code to make a positive impact. 
-                        I specialize in React, Node.js, and modern web technologies.
+                        My projects span smart waste management, climate-economic data visualization, digital libraries, and legal advocacy. Through these projects and my experience supporting students in IT and programming, I've developed practical skills across full-stack development, databases, APIs, and technical problem-solving.
+                    </p>
+                    <p class="text-gray-400 text-lg leading-relaxed">
+                        I enjoy turning ideas into working solutions and exploring how technology can create meaningful impact in communities and beyond.
                     </p>
                     <div class="grid grid-cols-2 gap-4 mt-6">
                         <div class="bg-[#0a0a0f] p-4 rounded-xl border border-gray-800">
                             <p class="font-semibold text-cyan-400"><i class="fas fa-graduation-cap mr-2"></i>BSc Computer Science</p>
-                            <p class="text-sm text-gray-400">Cavendish University (2026)</p>
+                            <p class="text-sm text-gray-400">Cavendish University (Class of 2026)</p>
                         </div>
                         <div class="bg-[#0a0a0f] p-4 rounded-xl border border-gray-800">
                             <p class="font-semibold text-cyan-400"><i class="fas fa-trophy mr-2"></i>UNHCR Scholar</p>
@@ -412,7 +439,7 @@
         </div>
     </section>
 
-    <!-- ===== SKILLS SECTION ===== -->
+    <!-- ===== SKILLS SECTION (UPDATED - REORGANIZED) ===== -->
     <section id="skills" class="py-20 bg-[#0a0a0f]">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="section-title">
@@ -422,7 +449,7 @@
                 <!-- Frontend -->
                 <div class="glass-card p-6 rounded-xl card-hover">
                     <h3 class="text-xl font-semibold mb-4 text-cyan-400">
-                        <i class="fas fa-code mr-2"></i>Frontend
+                        <i class="fas fa-code mr-2"></i>Frontend Development
                     </h3>
                     <div class="flex flex-wrap gap-2">
                         <span class="skill-tag bg-cyan-500/10 text-cyan-400">JavaScript</span>
@@ -430,28 +457,26 @@
                         <span class="skill-tag bg-cyan-500/10 text-cyan-400">Tailwind CSS</span>
                         <span class="skill-tag bg-cyan-500/10 text-cyan-400">HTML5</span>
                         <span class="skill-tag bg-cyan-500/10 text-cyan-400">CSS3</span>
-                        <span class="skill-tag bg-cyan-500/10 text-cyan-400">Chart.js</span>
                     </div>
                 </div>
 
                 <!-- Backend -->
                 <div class="glass-card p-6 rounded-xl card-hover">
-                    <h3 class="text-xl font-semibold mb-4 text-cyan-400">
-                        <i class="fas fa-server mr-2"></i>Backend
+                    <h3 class="text-xl font-semibold mb-4 text-blue-400">
+                        <i class="fas fa-server mr-2"></i>Backend & APIs
                     </h3>
                     <div class="flex flex-wrap gap-2">
                         <span class="skill-tag bg-blue-500/10 text-blue-400">Node.js</span>
                         <span class="skill-tag bg-blue-500/10 text-blue-400">Express.js</span>
                         <span class="skill-tag bg-blue-500/10 text-blue-400">PHP</span>
                         <span class="skill-tag bg-blue-500/10 text-blue-400">Python</span>
-                        <span class="skill-tag bg-blue-500/10 text-blue-400">Java</span>
-                        <span class="skill-tag bg-blue-500/10 text-blue-400">C++</span>
+                        <span class="skill-tag bg-blue-500/10 text-blue-400">REST APIs</span>
                     </div>
                 </div>
 
                 <!-- Databases -->
                 <div class="glass-card p-6 rounded-xl card-hover">
-                    <h3 class="text-xl font-semibold mb-4 text-cyan-400">
+                    <h3 class="text-xl font-semibold mb-4 text-purple-400">
                         <i class="fas fa-database mr-2"></i>Databases & Cloud
                     </h3>
                     <div class="flex flex-wrap gap-2">
@@ -460,77 +485,71 @@
                         <span class="skill-tag bg-purple-500/10 text-purple-400">Supabase</span>
                         <span class="skill-tag bg-purple-500/10 text-purple-400">Cloudinary</span>
                         <span class="skill-tag bg-purple-500/10 text-purple-400">Netlify</span>
-                        <span class="skill-tag bg-purple-500/10 text-purple-400">Render</span>
+                        <span class="skill-tag bg-purple-500/10 text-purple-400">Vercel</span>
                     </div>
                 </div>
 
-                <!-- AI -->
+                <!-- AI & Data -->
                 <div class="glass-card p-6 rounded-xl card-hover">
-                    <h3 class="text-xl font-semibold mb-4 text-cyan-400">
+                    <h3 class="text-xl font-semibold mb-4 text-yellow-400">
                         <i class="fas fa-brain mr-2"></i>AI & Data
                     </h3>
                     <div class="flex flex-wrap gap-2">
-                        <span class="skill-tag bg-yellow-500/10 text-yellow-400">ChatGPT API</span>
-                        <span class="skill-tag bg-yellow-500/10 text-yellow-400">Gemini</span>
-                        <span class="skill-tag bg-yellow-500/10 text-yellow-400">DeepSeek</span>
-                        <span class="skill-tag bg-yellow-500/10 text-yellow-400">Claude</span>
+                        <span class="skill-tag bg-yellow-500/10 text-yellow-400">AI API Integration</span>
                         <span class="skill-tag bg-yellow-500/10 text-yellow-400">Prompt Engineering</span>
                         <span class="skill-tag bg-yellow-500/10 text-yellow-400">Data Visualization</span>
+                        <span class="skill-tag bg-yellow-500/10 text-yellow-400">Chart.js</span>
                     </div>
                 </div>
 
                 <!-- Tools -->
                 <div class="glass-card p-6 rounded-xl card-hover">
-                    <h3 class="text-xl font-semibold mb-4 text-cyan-400">
+                    <h3 class="text-xl font-semibold mb-4 text-green-400">
                         <i class="fas fa-tools mr-2"></i>Tools & Workflows
                     </h3>
                     <div class="flex flex-wrap gap-2">
-                        <span class="skill-tag bg-green-500/10 text-green-400">Git</span>
-                        <span class="skill-tag bg-green-500/10 text-green-400">GitHub</span>
+                        <span class="skill-tag bg-green-500/10 text-green-400">Git/GitHub</span>
                         <span class="skill-tag bg-green-500/10 text-green-400">Postman</span>
                         <span class="skill-tag bg-green-500/10 text-green-400">VS Code</span>
                         <span class="skill-tag bg-green-500/10 text-green-400">Figma</span>
-                        <span class="skill-tag bg-green-500/10 text-green-400">Agile</span>
+                        <span class="skill-tag bg-green-500/10 text-green-400">Agile Methodologies</span>
                     </div>
                 </div>
 
-                <!-- Soft Skills -->
+                <!-- Programming Foundation -->
                 <div class="glass-card p-6 rounded-xl card-hover">
-                    <h3 class="text-xl font-semibold mb-4 text-cyan-400">
-                        <i class="fas fa-users mr-2"></i>Leadership & Soft Skills
+                    <h3 class="text-xl font-semibold mb-4 text-pink-400">
+                        <i class="fas fa-terminal mr-2"></i>Programming Foundation
                     </h3>
                     <div class="flex flex-wrap gap-2">
-                        <span class="skill-tag bg-pink-500/10 text-pink-400">Team Leadership</span>
-                        <span class="skill-tag bg-pink-500/10 text-pink-400">Communication</span>
-                        <span class="skill-tag bg-pink-500/10 text-pink-400">Problem Solving</span>
-                        <span class="skill-tag bg-pink-500/10 text-pink-400">Mentoring</span>
-                        <span class="skill-tag bg-pink-500/10 text-pink-400">Documentation</span>
+                        <span class="skill-tag bg-pink-500/10 text-pink-400">Java</span>
+                        <span class="skill-tag bg-pink-500/10 text-pink-400">Python</span>
+                        <span class="skill-tag bg-pink-500/10 text-pink-400">C++</span>
+                        <span class="skill-tag bg-pink-500/10 text-pink-400">SQL</span>
+                        <span class="skill-tag bg-pink-500/10 text-pink-400">Data Structures</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ===== PROJECTS SECTION (CAROUSEL) ===== -->
+    <!-- ===== PROJECTS SECTION (UPDATED - WITH CONTRIBUTION NOTES) ===== -->
     <section id="projects" class="py-20 bg-[#111118]">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="section-title">
-                All <span class="gradient-text">Projects</span>
+                Featured <span class="gradient-text">Projects</span>
             </h2>
             <p class="text-gray-400 text-center max-w-2xl mx-auto mb-6">
-                Scroll to see all 10+ projects — Live projects first, then GitHub-hosted code
+                Scroll to see all projects — Live projects first, then GitHub-hosted code
             </p>
             
-            <!-- Scroll Indicator -->
             <div class="text-center text-gray-500 text-sm mb-4">
                 <i class="fas fa-arrow-right scroll-indicator mr-2"></i> Scroll to explore →
             </div>
 
-            <!-- Projects Carousel -->
             <div class="projects-scroll" id="projectsContainer">
                 
-                <!-- ===== LIVE PROJECTS SECTION ===== -->
-                <!-- Project 1: Lusaka Clean (LIVE) -->
+                <!-- Project 1: Lusaka Clean (LIVE - Individual) -->
                 <div class="project-card border-green-500/20">
                     <div class="relative">
                         <img src="https://images.unsplash.com/photo-1584483766114-2cea6facdf57?w=600&h=400&fit=crop" alt="Lusaka Clean" class="project-img">
@@ -538,7 +557,11 @@
                     </div>
                     <div class="p-5">
                         <h3 class="text-lg font-bold text-white mb-1">Lusaka Clean</h3>
-                        <p class="text-gray-400 text-sm mb-3">Smart Waste Collection Tracking & Monitoring System (Dissertation).</p>
+                        <p class="text-gray-400 text-sm mb-2">Smart Waste Collection Tracking & Monitoring System.</p>
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="contribution-tag"><i class="fas fa-user mr-1"></i> Individual Project</span>
+                            <span class="badge">Dissertation</span>
+                        </div>
                         <div class="flex flex-wrap gap-1.5 mb-3">
                             <span class="badge">React.js</span>
                             <span class="badge">Supabase</span>
@@ -551,7 +574,7 @@
                     </div>
                 </div>
 
-                <!-- Project 2: Citizen Justice Portal (LIVE) -->
+                <!-- Project 2: Citizen Justice Portal (LIVE - Collaborative) -->
                 <div class="project-card border-green-500/20">
                     <div class="relative">
                         <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=600&h=400&fit=crop" alt="Citizen Justice Portal" class="project-img">
@@ -559,7 +582,11 @@
                     </div>
                     <div class="p-5">
                         <h3 class="text-lg font-bold text-white mb-1">Citizen Justice Portal</h3>
-                        <p class="text-gray-400 text-sm mb-3">AI-powered legal advocacy platform with DeepSeek integration.</p>
+                        <p class="text-gray-400 text-sm mb-2">AI-powered legal advocacy platform with DeepSeek integration.</p>
+                        <div class="flex flex-wrap items-center gap-2 mb-2">
+                            <span class="contribution-tag"><i class="fas fa-users mr-1"></i> Collaborative</span>
+                            <span class="badge-github text-xs">Role: Frontend & AI Integration</span>
+                        </div>
                         <div class="flex flex-wrap gap-1.5 mb-3">
                             <span class="badge">React.js</span>
                             <span class="badge">DeepSeek AI</span>
@@ -572,7 +599,7 @@
                     </div>
                 </div>
 
-                <!-- Project 3: Climate-Economic Dashboard (LIVE) -->
+                <!-- Project 3: Climate-Economic Dashboard (LIVE - Individual) -->
                 <div class="project-card border-green-500/20">
                     <div class="relative">
                         <img src="https://images.unsplash.com/photo-1611273426858-450d8e3c9fce?w=600&h=400&fit=crop" alt="Climate Dashboard" class="project-img">
@@ -580,7 +607,11 @@
                     </div>
                     <div class="p-5">
                         <h3 class="text-lg font-bold text-white mb-1">Climate-Economic Dashboard</h3>
-                        <p class="text-gray-400 text-sm mb-3">World Bank API integration for climate-economic data visualization.</p>
+                        <p class="text-gray-400 text-sm mb-2">World Bank API integration for climate-economic data visualization.</p>
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="contribution-tag"><i class="fas fa-user mr-1"></i> Individual Project</span>
+                            <span class="badge">Coursework</span>
+                        </div>
                         <div class="flex flex-wrap gap-1.5 mb-3">
                             <span class="badge">React.js</span>
                             <span class="badge">Node.js</span>
@@ -593,15 +624,67 @@
                     </div>
                 </div>
 
-                <!-- Project 4: MantTeq Website (LIVE) -->
+                <!-- Project 4: Communiversity Library (Collaborative) -->
+                <div class="project-card border-gray-700">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=600&h=400&fit=crop" alt="Digital Library" class="project-img">
+                        <span class="absolute top-3 right-3 status-badge status-github"><i class="fab fa-github mr-1"></i> Code</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-lg font-bold text-white mb-1">Communiversity Digital Library</h3>
+                        <p class="text-gray-400 text-sm mb-2">Offline-first digital library for low-connectivity regions.</p>
+                        <div class="flex flex-wrap items-center gap-2 mb-2">
+                            <span class="contribution-tag"><i class="fas fa-users mr-1"></i> Collaborative</span>
+                            <span class="badge-github text-xs">Role: Backend & API Design</span>
+                        </div>
+                        <div class="flex flex-wrap gap-1.5 mb-3">
+                            <span class="badge">React.js</span>
+                            <span class="badge">Express.js</span>
+                            <span class="badge">MongoDB</span>
+                        </div>
+                        <div class="flex gap-3 text-sm">
+                            <a href="https://github.com/MICHEAL7400/communiversity-library" target="_blank" class="text-gray-400 hover:text-white"><i class="fab fa-github mr-1"></i>View Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5: CavAir Reservation System (Individual) -->
+                <div class="project-card border-gray-700">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=600&h=400&fit=crop" alt="CavAir" class="project-img">
+                        <span class="absolute top-3 right-3 status-badge status-github"><i class="fab fa-github mr-1"></i> Code</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-lg font-bold text-white mb-1">CavAir Reservation System</h3>
+                        <p class="text-gray-400 text-sm mb-2">Flight booking system with CRUD operations and user auth.</p>
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="contribution-tag"><i class="fas fa-user mr-1"></i> Individual Project</span>
+                            <span class="badge">Coursework</span>
+                        </div>
+                        <div class="flex flex-wrap gap-1.5 mb-3">
+                            <span class="badge">PHP</span>
+                            <span class="badge">MySQL</span>
+                            <span class="badge">HTML/CSS</span>
+                        </div>
+                        <div class="flex gap-3 text-sm">
+                            <a href="https://github.com/MICHEAL7400/cavair-reservation" target="_blank" class="text-gray-400 hover:text-white"><i class="fab fa-github mr-1"></i>View Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6: MantTeq Website (Individual) -->
                 <div class="project-card border-green-500/20">
                     <div class="relative">
                         <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop" alt="MantTeq" class="project-img">
                         <span class="absolute top-3 right-3 status-badge status-live"><i class="fas fa-circle text-[8px] mr-1"></i> Live</span>
                     </div>
                     <div class="p-5">
-                        <h3 class="text-lg font-bold text-white mb-1">MantTeq Portfolio</h3>
-                        <p class="text-gray-400 text-sm mb-3">Professional tech solutions company website.</p>
+                        <h3 class="text-lg font-bold text-white mb-1">MantTeq Website</h3>
+                        <p class="text-gray-400 text-sm mb-2">Professional tech solutions company website.</p>
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="contribution-tag"><i class="fas fa-user mr-1"></i> Individual Project</span>
+                            <span class="badge">Freelance</span>
+                        </div>
                         <div class="flex flex-wrap gap-1.5 mb-3">
                             <span class="badge">HTML5</span>
                             <span class="badge">CSS3</span>
@@ -614,77 +697,19 @@
                     </div>
                 </div>
 
-                <!-- Project 5: Portfolio Website (LIVE) -->
-                <div class="project-card border-green-500/20">
-                    <div class="relative">
-                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=400&fit=crop" alt="Portfolio" class="project-img">
-                        <span class="absolute top-3 right-3 status-badge status-live"><i class="fas fa-circle text-[8px] mr-1"></i> Live</span>
-                    </div>
-                    <div class="p-5">
-                        <h3 class="text-lg font-bold text-white mb-1">Personal Portfolio</h3>
-                        <p class="text-gray-400 text-sm mb-3">Modern portfolio website showcasing all my work.</p>
-                        <div class="flex flex-wrap gap-1.5 mb-3">
-                            <span class="badge">HTML5</span>
-                            <span class="badge">Tailwind</span>
-                            <span class="badge">JavaScript</span>
-                        </div>
-                        <div class="flex gap-3 text-sm">
-                            <a href="#" class="text-cyan-400 hover:text-cyan-300"><i class="fas fa-external-link-alt mr-1"></i>Live Demo</a>
-                            <a href="https://github.com/MICHEAL7400/portfolio" target="_blank" class="text-gray-400 hover:text-white"><i class="fab fa-github mr-1"></i>Code</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- ===== GITHUB-ONLY PROJECTS SECTION ===== -->
-                <!-- Project 6: Communiversity Library (GitHub Only) -->
+                <!-- Project 7: Student Management System (Individual) -->
                 <div class="project-card border-gray-700">
                     <div class="relative">
-                        <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=600&h=400&fit=crop" alt="Digital Library" class="project-img">
-                        <span class="absolute top-3 right-3 status-badge status-github"><i class="fab fa-github mr-1"></i> Code</span>
-                    </div>
-                    <div class="p-5">
-                        <h3 class="text-lg font-bold text-white mb-1">Communiversity Digital Library</h3>
-                        <p class="text-gray-400 text-sm mb-3">Offline-first digital library for low-connectivity regions.</p>
-                        <div class="flex flex-wrap gap-1.5 mb-3">
-                            <span class="badge">React.js</span>
-                            <span class="badge">Express.js</span>
-                            <span class="badge">MongoDB</span>
-                        </div>
-                        <div class="flex gap-3 text-sm">
-                            <a href="https://github.com/MICHEAL7400/communiversity-library" target="_blank" class="text-gray-400 hover:text-white"><i class="fab fa-github mr-1"></i>View Code</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 7: CavAir Reservation System (GitHub Only) -->
-                <div class="project-card border-gray-700">
-                    <div class="relative">
-                        <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=600&h=400&fit=crop" alt="CavAir" class="project-img">
-                        <span class="absolute top-3 right-3 status-badge status-github"><i class="fab fa-github mr-1"></i> Code</span>
-                    </div>
-                    <div class="p-5">
-                        <h3 class="text-lg font-bold text-white mb-1">CavAir Reservation System</h3>
-                        <p class="text-gray-400 text-sm mb-3">Flight booking system with CRUD operations and user auth.</p>
-                        <div class="flex flex-wrap gap-1.5 mb-3">
-                            <span class="badge">PHP</span>
-                            <span class="badge">MySQL</span>
-                            <span class="badge">HTML/CSS</span>
-                        </div>
-                        <div class="flex gap-3 text-sm">
-                            <a href="https://github.com/MICHEAL7400/cavair-reservation" target="_blank" class="text-gray-400 hover:text-white"><i class="fab fa-github mr-1"></i>View Code</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 8: Student Management System (GitHub Only) -->
-                <div class="project-card border-gray-700">
-                    <div class="relative">
-                        <img src="https://images.unsplash.com/photo-1523050854058-8df90110c7f1?w=600&h=400&fit=crop" alt="Student Management" class="project-img">
+                        <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=600&h=400&fit=crop&crop=center" alt="Student Management" class="project-img">
                         <span class="absolute top-3 right-3 status-badge status-github"><i class="fab fa-github mr-1"></i> Code</span>
                     </div>
                     <div class="p-5">
                         <h3 class="text-lg font-bold text-white mb-1">Student Management System</h3>
-                        <p class="text-gray-400 text-sm mb-3">Complete student records and grade management platform.</p>
+                        <p class="text-gray-400 text-sm mb-2">Complete student records and grade management platform.</p>
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="contribution-tag"><i class="fas fa-user mr-1"></i> Individual Project</span>
+                            <span class="badge">Coursework</span>
+                        </div>
                         <div class="flex flex-wrap gap-1.5 mb-3">
                             <span class="badge">Python</span>
                             <span class="badge">Django</span>
@@ -696,27 +721,7 @@
                     </div>
                 </div>
 
-                <!-- Project 9: E-Commerce Platform (GitHub Only) -->
-                <div class="project-card border-gray-700">
-                    <div class="relative">
-                        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop" alt="E-Commerce" class="project-img">
-                        <span class="absolute top-3 right-3 status-badge status-github"><i class="fab fa-github mr-1"></i> Code</span>
-                    </div>
-                    <div class="p-5">
-                        <h3 class="text-lg font-bold text-white mb-1">E-Commerce Platform</h3>
-                        <p class="text-gray-400 text-sm mb-3">Full-featured online store with payment integration.</p>
-                        <div class="flex flex-wrap gap-1.5 mb-3">
-                            <span class="badge">React.js</span>
-                            <span class="badge">Node.js</span>
-                            <span class="badge">Stripe</span>
-                        </div>
-                        <div class="flex gap-3 text-sm">
-                            <a href="https://github.com/MICHEAL7400/ecommerce-platform" target="_blank" class="text-gray-400 hover:text-white"><i class="fab fa-github mr-1"></i>View Code</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 10: Task Management App (GitHub Only) -->
+                <!-- Project 8: Task Management App (Collaborative) -->
                 <div class="project-card border-gray-700">
                     <div class="relative">
                         <img src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=600&h=400&fit=crop" alt="Task Manager" class="project-img">
@@ -724,7 +729,11 @@
                     </div>
                     <div class="p-5">
                         <h3 class="text-lg font-bold text-white mb-1">Task Management App</h3>
-                        <p class="text-gray-400 text-sm mb-3">Team task tracking with real-time updates and notifications.</p>
+                        <p class="text-gray-400 text-sm mb-2">Team task tracking with real-time updates and notifications.</p>
+                        <div class="flex flex-wrap items-center gap-2 mb-2">
+                            <span class="contribution-tag"><i class="fas fa-users mr-1"></i> Collaborative</span>
+                            <span class="badge-github text-xs">Role: Frontend & Firebase</span>
+                        </div>
                         <div class="flex flex-wrap gap-1.5 mb-3">
                             <span class="badge">React.js</span>
                             <span class="badge">Firebase</span>
@@ -736,49 +745,8 @@
                     </div>
                 </div>
 
-                <!-- Project 11: Weather App (GitHub Only) -->
-                <div class="project-card border-gray-700">
-                    <div class="relative">
-                        <img src="https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=600&h=400&fit=crop" alt="Weather App" class="project-img">
-                        <span class="absolute top-3 right-3 status-badge status-github"><i class="fab fa-github mr-1"></i> Code</span>
-                    </div>
-                    <div class="p-5">
-                        <h3 class="text-lg font-bold text-white mb-1">Weather App</h3>
-                        <p class="text-gray-400 text-sm mb-3">Real-time weather data with interactive maps and forecasts.</p>
-                        <div class="flex flex-wrap gap-1.5 mb-3">
-                            <span class="badge">JavaScript</span>
-                            <span class="badge">API</span>
-                            <span class="badge">CSS3</span>
-                        </div>
-                        <div class="flex gap-3 text-sm">
-                            <a href="https://github.com/MICHEAL7400/weather-app" target="_blank" class="text-gray-400 hover:text-white"><i class="fab fa-github mr-1"></i>View Code</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 12: Chat Application (GitHub Only) -->
-                <div class="project-card border-gray-700">
-                    <div class="relative">
-                        <img src="https://images.unsplash.com/photo-1516387938699-a93567ec168e?w=600&h=400&fit=crop" alt="Chat App" class="project-img">
-                        <span class="absolute top-3 right-3 status-badge status-github"><i class="fab fa-github mr-1"></i> Code</span>
-                    </div>
-                    <div class="p-5">
-                        <h3 class="text-lg font-bold text-white mb-1">Chat Application</h3>
-                        <p class="text-gray-400 text-sm mb-3">Real-time messaging with rooms, groups, and file sharing.</p>
-                        <div class="flex flex-wrap gap-1.5 mb-3">
-                            <span class="badge">Node.js</span>
-                            <span class="badge">Socket.io</span>
-                            <span class="badge">React</span>
-                        </div>
-                        <div class="flex gap-3 text-sm">
-                            <a href="https://github.com/MICHEAL7400/chat-app" target="_blank" class="text-gray-400 hover:text-white"><i class="fab fa-github mr-1"></i>View Code</a>
-                        </div>
-                    </div>
-                </div>
-
             </div>
 
-            <!-- GitHub Link -->
             <div class="text-center mt-8">
                 <a href="https://github.com/MICHEAL7400" target="_blank" class="text-cyan-400 hover:text-cyan-300 font-semibold text-lg">
                     <i class="fab fa-github mr-2"></i>View All Projects on GitHub →
@@ -794,7 +762,6 @@
                 Experience & <span class="gradient-text">Education</span>
             </h2>
             <div class="grid md:grid-cols-2 gap-12">
-                <!-- Experience -->
                 <div>
                     <h3 class="text-2xl font-bold mb-6 text-white border-b border-cyan-500/20 pb-3">
                         <i class="fas fa-briefcase text-cyan-400 mr-2"></i>Professional Experience
@@ -822,7 +789,6 @@
                     </div>
                 </div>
 
-                <!-- Education -->
                 <div>
                     <h3 class="text-2xl font-bold mb-6 text-white border-b border-cyan-500/20 pb-3">
                         <i class="fas fa-graduation-cap text-cyan-400 mr-2"></i>Education
@@ -831,7 +797,7 @@
                         <div class="relative">
                             <span class="timeline-dot"></span>
                             <h4 class="text-lg font-bold text-white">BSc Computer Science</h4>
-                            <p class="text-cyan-400 text-sm">Cavendish University Zambia | Graduated Oct 2026</p>
+                            <p class="text-cyan-400 text-sm">Cavendish University Zambia | Class of 2026</p>
                             <ul class="mt-2 text-gray-400 text-sm space-y-1 list-disc pl-4">
                                 <li>UNHCR-Cavendish University Scholarship Recipient</li>
                                 <li>Coursework: Software Engineering, AI, Database Systems, Data Structures</li>
@@ -878,136 +844,156 @@
         </div>
     </section>
 
-    <!-- ===== CERTIFICATES SECTION ===== -->
-    <!-- ===== CERTIFICATES SECTION ===== -->
-<section id="certificates" class="py-20 bg-[#0a0a0f]">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="section-title">
-            <span class="gradient-text">Certifications</span>
-            <span class="text-sm text-gray-400 block mt-1">Actively Learning</span>
-        </h2>
-        <p class="text-gray-400 text-center max-w-2xl mx-auto mb-10">
-            Professional certificates currently in progress through Cavendish University's Coursera partnership
-        </p>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto">
-            
-            <!-- Google IT Support -->
-            <div class="bg-[#111118] p-5 rounded-xl border border-gray-800 hover:border-cyan-500/50 transition-all">
-                <div class="flex items-start gap-4">
-                    <div class="text-3xl text-cyan-400"><i class="fab fa-google"></i></div>
-                    <div class="flex-1">
-                        <div class="flex justify-between items-start">
-                            <h4 class="font-bold text-white text-sm">Google IT Support</h4>
-                            <span class="bg-yellow-500/20 text-yellow-400 text-xs px-2 py-0.5 rounded-full">In Progress</span>
-                        </div>
-                        <p class="text-gray-400 text-xs mt-1">5 of 6 courses complete</p>
-                        <div class="w-full bg-gray-700 rounded-full h-1.5 mt-2">
-                            <div class="bg-gradient-to-r from-cyan-400 to-blue-500 h-1.5 rounded-full" style="width: 80%"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Google Data Analytics -->
-            <div class="bg-[#111118] p-5 rounded-xl border border-gray-800 hover:border-cyan-500/50 transition-all">
-                <div class="flex items-start gap-4">
-                    <div class="text-3xl text-cyan-400"><i class="fab fa-google"></i></div>
-                    <div class="flex-1">
-                        <div class="flex justify-between items-start">
-                            <h4 class="font-bold text-white text-sm">Google Data Analytics</h4>
-                            <span class="bg-yellow-500/20 text-yellow-400 text-xs px-2 py-0.5 rounded-full">In Progress</span>
-                        </div>
-                        <p class="text-gray-400 text-xs mt-1">7 of 9 courses complete</p>
-                        <div class="w-full bg-gray-700 rounded-full h-1.5 mt-2">
-                            <div class="bg-gradient-to-r from-cyan-400 to-blue-500 h-1.5 rounded-full" style="width: 74%"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- IBM Full Stack -->
-            <div class="bg-[#111118] p-5 rounded-xl border border-gray-800 hover:border-cyan-500/50 transition-all">
-                <div class="flex items-start gap-4">
-                    <div class="text-3xl text-blue-400"><i class="fab fa-ibm"></i></div>
-                    <div class="flex-1">
-                        <div class="flex justify-between items-start">
-                            <h4 class="font-bold text-white text-sm">IBM Full Stack Developer</h4>
-                            <span class="bg-yellow-500/20 text-yellow-400 text-xs px-2 py-0.5 rounded-full">In Progress</span>
-                        </div>
-                        <p class="text-gray-400 text-xs mt-1">9 of 15 courses complete</p>
-                        <div class="w-full bg-gray-700 rounded-full h-1.5 mt-2">
-                            <div class="bg-gradient-to-r from-blue-400 to-indigo-500 h-1.5 rounded-full" style="width: 67%"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Meta React Native -->
-            <div class="bg-[#111118] p-5 rounded-xl border border-gray-800 hover:border-cyan-500/50 transition-all">
-                <div class="flex items-start gap-4">
-                    <div class="text-3xl text-purple-400"><i class="fab fa-facebook"></i></div>
-                    <div class="flex-1">
-                        <div class="flex justify-between items-start">
-                            <h4 class="font-bold text-white text-sm">Meta React Native</h4>
-                            <span class="bg-yellow-500/20 text-yellow-400 text-xs px-2 py-0.5 rounded-full">In Progress</span>
-                        </div>
-                        <p class="text-gray-400 text-xs mt-1">6 of 8 courses in progress</p>
-                        <div class="w-full bg-gray-700 rounded-full h-1.5 mt-2">
-                            <div class="bg-gradient-to-r from-purple-400 to-pink-500 h-1.5 rounded-full" style="width: 75%"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Intro to NodeJS -->
-            <div class="bg-[#111118] p-5 rounded-xl border border-gray-800 hover:border-cyan-500/50 transition-all">
-                <div class="flex items-start gap-4">
-                    <div class="text-3xl text-green-400"><i class="fab fa-node"></i></div>
-                    <div class="flex-1">
-                        <div class="flex justify-between items-start">
-                            <h4 class="font-bold text-white text-sm">Intro to NodeJS</h4>
-                            <span class="bg-yellow-500/20 text-yellow-400 text-xs px-2 py-0.5 rounded-full">In Progress</span>
-                        </div>
-                        <p class="text-gray-400 text-xs mt-1">72% complete</p>
-                        <div class="w-full bg-gray-700 rounded-full h-1.5 mt-2">
-                            <div class="bg-gradient-to-r from-green-400 to-emerald-500 h-1.5 rounded-full" style="width: 72%"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Cross Platform Mobile Dev -->
-            <div class="bg-[#111118] p-5 rounded-xl border border-gray-800 opacity-60">
-                <div class="flex items-start gap-4">
-                    <div class="text-3xl text-gray-500"><i class="fas fa-mobile-alt"></i></div>
-                    <div class="flex-1">
-                        <div class="flex justify-between items-start">
-                            <h4 class="font-bold text-white text-sm">Cross Platform Mobile Dev</h4>
-                            <span class="bg-gray-500/20 text-gray-400 text-xs px-2 py-0.5 rounded-full">Not Started</span>
-                        </div>
-                        <p class="text-gray-400 text-xs mt-1">0% complete</p>
-                        <div class="w-full bg-gray-700 rounded-full h-1.5 mt-2">
-                            <div class="bg-gray-500 h-1.5 rounded-full" style="width: 0%"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="text-center mt-8">
-            <a href="https://www.coursera.org/programs/cuz-students-nhn02/my-learning?myLearningTab=IN_PROGRESS" target="_blank" 
-               class="text-cyan-400 hover:text-cyan-300 text-sm font-medium">
-                <i class="fas fa-external-link-alt mr-1"></i>View my Coursera profile
-            </a>
-            <p class="text-gray-500 text-xs mt-3">
-                <i class="fas fa-shield-alt text-cyan-400 mr-1"></i>
-                All courses offered through Cavendish University Zambia's institutional partnership
+    <!-- ===== PROFESSIONAL LEARNING SECTION (NEW) ===== -->
+    <section id="learning" class="py-20 bg-[#0a0a0f]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="section-title">
+                <span class="gradient-text">Professional Learning</span>
+            </h2>
+            <p class="text-gray-400 text-center max-w-2xl mx-auto mb-10">
+                Continuously expanding my technical skills through structured courses, professional programs, and hands-on learning.
             </p>
+
+            <!-- Completed Section -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-bold text-white mb-6 flex items-center gap-2">
+                    <i class="fas fa-check-circle text-green-400"></i> Completed
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <!-- Google IT Support -->
+                    <div class="bg-[#111118] p-5 rounded-xl border border-green-500/20 cert-card">
+                        <div class="flex items-start gap-4">
+                            <div class="text-3xl text-cyan-400"><i class="fab fa-google"></i></div>
+                            <div class="flex-1">
+                                <div class="flex justify-between items-start">
+                                    <h4 class="font-bold text-white text-sm">Google IT Support Professional</h4>
+                                    <span class="badge-completed"><i class="fas fa-check mr-1"></i> Completed</span>
+                                </div>
+                                <p class="text-gray-400 text-xs mt-1">Google / Coursera</p>
+                                <p class="text-gray-500 text-xs mt-1">Skills: IT Support · Networking · Troubleshooting</p>
+                                <a href="#" class="text-cyan-400 text-xs mt-2 inline-block hover:text-cyan-300">
+                                    <i class="fas fa-external-link-alt mr-1"></i>View Certificate →
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Google Data Analytics -->
+                    <div class="bg-[#111118] p-5 rounded-xl border border-green-500/20 cert-card">
+                        <div class="flex items-start gap-4">
+                            <div class="text-3xl text-cyan-400"><i class="fab fa-google"></i></div>
+                            <div class="flex-1">
+                                <div class="flex justify-between items-start">
+                                    <h4 class="font-bold text-white text-sm">Google Data Analytics</h4>
+                                    <span class="badge-completed"><i class="fas fa-check mr-1"></i> Completed</span>
+                                </div>
+                                <p class="text-gray-400 text-xs mt-1">Google / Coursera</p>
+                                <p class="text-gray-500 text-xs mt-1">Skills: Data Analysis · Visualization · SQL</p>
+                                <a href="#" class="text-cyan-400 text-xs mt-2 inline-block hover:text-cyan-300">
+                                    <i class="fas fa-external-link-alt mr-1"></i>View Certificate →
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Currently Learning Section -->
+            <div>
+                <h3 class="text-2xl font-bold text-white mb-6 flex items-center gap-2">
+                    <i class="fas fa-spinner text-yellow-400"></i> Currently Learning
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <!-- IBM Full Stack -->
+                    <div class="bg-[#111118] p-5 rounded-xl border border-yellow-500/20 learning-card">
+                        <div class="flex items-start gap-4">
+                            <div class="text-3xl text-blue-400"><i class="fab fa-ibm"></i></div>
+                            <div class="flex-1">
+                                <div class="flex justify-between items-start">
+                                    <h4 class="font-bold text-white text-sm">IBM Full Stack Developer</h4>
+                                    <span class="badge-progress"><i class="fas fa-spinner mr-1"></i> In Progress</span>
+                                </div>
+                                <p class="text-gray-400 text-xs mt-1">IBM / Coursera</p>
+                                <div class="flex items-center gap-2 mt-1">
+                                    <div class="flex-1 bg-gray-700 rounded-full h-1.5">
+                                        <div class="bg-blue-400 h-1.5 rounded-full" style="width: 60%"></div>
+                                    </div>
+                                    <span class="text-gray-400 text-xs">9 / 15 courses</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Meta React Native -->
+                    <div class="bg-[#111118] p-5 rounded-xl border border-yellow-500/20 learning-card">
+                        <div class="flex items-start gap-4">
+                            <div class="text-3xl text-purple-400"><i class="fab fa-facebook"></i></div>
+                            <div class="flex-1">
+                                <div class="flex justify-between items-start">
+                                    <h4 class="font-bold text-white text-sm">Meta React Native</h4>
+                                    <span class="badge-progress"><i class="fas fa-spinner mr-1"></i> In Progress</span>
+                                </div>
+                                <p class="text-gray-400 text-xs mt-1">Meta / Coursera</p>
+                                <div class="flex items-center gap-2 mt-1">
+                                    <div class="flex-1 bg-gray-700 rounded-full h-1.5">
+                                        <div class="bg-purple-400 h-1.5 rounded-full" style="width: 75%"></div>
+                                    </div>
+                                    <span class="text-gray-400 text-xs">6 / 8 courses</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Intro to NodeJS -->
+                    <div class="bg-[#111118] p-5 rounded-xl border border-yellow-500/20 learning-card">
+                        <div class="flex items-start gap-4">
+                            <div class="text-3xl text-green-400"><i class="fab fa-node"></i></div>
+                            <div class="flex-1">
+                                <div class="flex justify-between items-start">
+                                    <h4 class="font-bold text-white text-sm">Intro to NodeJS</h4>
+                                    <span class="badge-progress"><i class="fas fa-spinner mr-1"></i> In Progress</span>
+                                </div>
+                                <p class="text-gray-400 text-xs mt-1">Packt / Coursera</p>
+                                <div class="flex items-center gap-2 mt-1">
+                                    <div class="flex-1 bg-gray-700 rounded-full h-1.5">
+                                        <div class="bg-green-400 h-1.5 rounded-full" style="width: 72%"></div>
+                                    </div>
+                                    <span class="text-gray-400 text-xs">72% complete</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Foundation of Data Structures -->
+                    <div class="bg-[#111118] p-5 rounded-xl border border-yellow-500/20 learning-card">
+                        <div class="flex items-start gap-4">
+                            <div class="text-3xl text-pink-400"><i class="fas fa-code"></i></div>
+                            <div class="flex-1">
+                                <div class="flex justify-between items-start">
+                                    <h4 class="font-bold text-white text-sm">Data Structures & Algorithms</h4>
+                                    <span class="badge-progress"><i class="fas fa-spinner mr-1"></i> In Progress</span>
+                                </div>
+                                <p class="text-gray-400 text-xs mt-1">Coursera</p>
+                                <div class="flex items-center gap-2 mt-1">
+                                    <div class="flex-1 bg-gray-700 rounded-full h-1.5">
+                                        <div class="bg-pink-400 h-1.5 rounded-full" style="width: 12%"></div>
+                                    </div>
+                                    <span class="text-gray-400 text-xs">1 / 5 courses</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-8">
+                <p class="text-gray-500 text-xs">
+                    <i class="fas fa-shield-alt text-cyan-400 mr-1"></i>
+                    All courses offered through Cavendish University Zambia's institutional partnership
+                </p>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <!-- ===== CONTACT SECTION ===== -->
     <section id="contact" class="py-20 gradient-bg">
